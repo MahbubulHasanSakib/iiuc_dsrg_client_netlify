@@ -105,7 +105,7 @@ const Commitee = () => {
 
       committee && committee.length > 0 && members && members.length > 0 ?
          <>
-            <h1 className='text-center fw-bold p-5'>Commitee Members</h1>
+            <h3 className='text-center' style={{padding:"20px 0px",backgroundColor:"#f6f6f6"}}>Executive Committee</h3>
             <Container>
 
                {/* chief and vice chief */}
@@ -113,7 +113,7 @@ const Commitee = () => {
                <>
                   <div className='border-2 border-bottom border-dark-subtle'>
                      <div className='row justify-content-center'>
-                        <div className='commitee-member'>
+                        <div className='commitee-member' style={{marginBottom:20}}>
                            <img src={image_of_chief || ProfileImg} alt="" />
                            <Link to={`/me/${chief.username}`}><h3>{chief.name}</h3></Link>
                            <p>{chief.designation}</p>

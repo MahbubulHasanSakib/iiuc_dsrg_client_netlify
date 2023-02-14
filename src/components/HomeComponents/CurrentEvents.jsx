@@ -73,7 +73,7 @@ const CurrentEvents = () => {
                 }
             </Row>
             <div className='mt-5' style={{ textAlign: 'center', color: "white" }}>
-                <Link to="/events-news"><button className='btn btn-outline-dark px-5 py-2'>See More Events</button></Link>
+                <Link to="/activities"><button className='btn btn-outline-dark px-5 py-2'>See More Events</button></Link>
             </div>
         </Container>
     );

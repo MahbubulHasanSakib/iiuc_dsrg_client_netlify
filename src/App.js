@@ -26,6 +26,9 @@ import EditUserProfileScreen from "./screens/EditUserProfileScreen";
 import ChangePasswordScreen from "./screens/ChangePasswordScreen";
 import AddBlogScreen from "./screens/AddBlogScreen";
 import BlogDetailsScreen from "./screens/BlogDetailsScreen";
+import AddFacultyScreen from "./screens/AddFacultyScreen";
+import EditFacultyScreen from "./screens/EditFacultyScreen";
+import FacultyListScreen from "./screens/FacultyListScreen";
 function App() {
   return (
     <div className="App">
@@ -36,10 +39,10 @@ function App() {
       <Route path="/about"  element={<AboutScreen />} />
       <Route path="/founder-and-head" element={<ExecutiveScreen />} />
       <Route path="/advisory-panel" element={<ExecutiveScreen />} />
-      <Route path="/teacher-trainer" element={<ExecutiveScreen />} />
-      <Route path="/commitee-members" element={<ExecutiveScreen />} />
+      <Route path="/faculty-members" element={<ExecutiveScreen />} />
+      <Route path="/executive-committee" element={<ExecutiveScreen />} />
       <Route path="/publication"  element={<PublicationScreen />} />
-      <Route path="/events-news"  element={<EventsAndNewsScreen />} />
+      <Route path="/activities"  element={<EventsAndNewsScreen />} />
       <Route path="/blogs"  element={<BlogsScreen />} />
       <Route path="/members"  element={<MembersScreen />} />
       <Route path="/me/:username"  element={<MemberDetailsScreen />} />
@@ -49,11 +52,14 @@ function App() {
       <Route path="/events/:eid"  element={< EventDetailsScreen/>} />
       <Route path="/blogs/:bid"  element={< BlogDetailsScreen/>} />
       <Route path="/editMember/:id"  element={<EditMemberScreen />} />
+      <Route path="/editFaculty/:fid"  element={<EditFacultyScreen />} />
       <Route path="/login"  element={<LoginScreen />} />
       <Route path="/membersList"  element={<MembersListScreen />} />
+      <Route path="/facultiesList"  element={<FacultyListScreen />} />
       <Route path="/profile"  element={<ProfileScreen />} />
       <Route path="/my-profile"  element={<EditUserProfileScreen />} />
       <Route path="/change-password"  element={<ChangePasswordScreen />} />
+      <Route path="/add-faculty"  element={<AddFacultyScreen />} />
     </Routes>
   </BrowserRouter>
     </div>

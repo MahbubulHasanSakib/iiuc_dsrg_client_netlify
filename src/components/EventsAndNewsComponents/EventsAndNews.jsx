@@ -96,7 +96,7 @@ if (elapsedMinutes < 60) {
                 <div className="mt-5">
                     <div className='title-div partners mb-5'>
                         <Separator />
-                        <div> <h3 className='text-center'>Events & News</h3></div>
+                        <div> <h3 className='text-center'>Activities</h3></div>
                         <Separator />
                     </div>
                     <div>

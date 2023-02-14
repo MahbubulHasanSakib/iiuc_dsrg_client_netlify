@@ -39,20 +39,20 @@ const Header = () => {
 
             <NavDropdown
               className={`${(currentLocation !== "/about" && currentLocation !== "/publication"
-                && currentLocation !== "/" && currentLocation !== "/events-news" && currentLocation !== "/blogs" 
+                && currentLocation !== "/" && currentLocation !== "/activities" && currentLocation !== "/blogs" 
                 && currentLocation !== "/add-blog" && !params.eid && !params.bid) ?
                 "activeNavLink" : ""}`} title="Team" id="navbarScrollingDropdown">
               <NavDropdown.Item className={`${currentLocation === "/founder-and-head" ? "activeNavLink" : ""}`} as={Link} to="/founder-and-head">Founder and Head</NavDropdown.Item>
               <NavDropdown.Item className={`${currentLocation === "/advisory-panel" ? "activeNavLink" : ""}`} as={Link} to="/advisory-panel">Advisory Panel</NavDropdown.Item>
-              <NavDropdown.Item className={`${currentLocation === "/teacher-trainer" ? "activeNavLink" : ""}`} as={Link} to="/teacher-trainer">Teacher/Trainer</NavDropdown.Item>
-              <NavDropdown.Item className={`${currentLocation === "/commitee-members" ? "activeNavLink" : ""}`} as={Link} to="/commitee-members">Commitee Members</NavDropdown.Item>
+              <NavDropdown.Item className={`${currentLocation === "/faculty-members" ? "activeNavLink" : ""}`} as={Link} to="/faculty-members">Faculty Members</NavDropdown.Item>
+              <NavDropdown.Item className={`${currentLocation === "/executive-committee" ? "activeNavLink" : ""}`} as={Link} to="/executive-committee">Executive Committee</NavDropdown.Item>
               <NavDropdown.Item className={`${currentLocation === "/members" || params.id ? "activeNavLink" : ""}`} as={Link} to="/members">General Members</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link as={Link}
-              className={`${(currentLocation === "/events-news"||params.eid) ? "activeNavLink" : ""}`}
-              to="/events-news">
-              Events/News
+              className={`${(currentLocation === "/activities"||params.eid) ? "activeNavLink" : ""}`}
+              to="/activities">
+              Activities
             </Nav.Link>
             
             <Nav.Link as={Link}
@@ -80,7 +80,7 @@ const Header = () => {
                 userInfo.isAdmin?
                 <>
                   <NavDropdown
-                    className={`${(currentLocation !== "/about" && currentLocation !== "/publication" && currentLocation !== "/" && currentLocation !== "/events-news" && currentLocation !== "/blogs" && currentLocation !== "/members" && !(params.id)) ?
+                    className={`${(currentLocation !== "/about" && currentLocation !== "/publication" && currentLocation !== "/" && currentLocation !== "/activities" && currentLocation !== "/blogs" && currentLocation !== "/members" && !(params.id)) ?
                       "activeNavLink" : ""}`} title="Admin" id="navbarScrollingDropdown">
                     <NavDropdown.Item as={Link} to="/admin">Add Member</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/membersList">Members List</NavDropdown.Item>

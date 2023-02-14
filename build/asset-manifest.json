@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.88705a2c.css",
-    "main.js": "/static/js/main.3f1464e6.js",
+    "main.css": "/static/css/main.ee3b0f32.css",
+    "main.js": "/static/js/main.395dd5c9.js",
     "static/media/washington.png": "/static/media/washington.f72bbcab490bc39f39c8.png",
     "static/media/partner.png": "/static/media/partner.5d0df77d5ae2db4cbfcd.png",
     "static/media/LoginUpLogo.png": "/static/media/LoginUpLogo.2ec90d8b41fa2c2907b3.png",
@@ -16,11 +16,11 @@
     "static/media/profileImg.jpg": "/static/media/profileImg.0420a2381e7d12b9ce26.jpg",
     "static/media/EsrdLab_Events.jpg": "/static/media/EsrdLab_Events.340275bf7a33d67c5a3e.jpg",
     "index.html": "/index.html",
-    "main.88705a2c.css.map": "/static/css/main.88705a2c.css.map",
-    "main.3f1464e6.js.map": "/static/js/main.3f1464e6.js.map"
+    "main.ee3b0f32.css.map": "/static/css/main.ee3b0f32.css.map",
+    "main.395dd5c9.js.map": "/static/js/main.395dd5c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.88705a2c.css",
-    "static/js/main.3f1464e6.js"
+    "static/css/main.ee3b0f32.css",
+    "static/js/main.395dd5c9.js"
   ]
 }

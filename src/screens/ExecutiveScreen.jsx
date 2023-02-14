@@ -19,11 +19,11 @@ const ExecutiveScreen = () => {
       <Advisory/>
     }
     {
-      path==="/teacher-trainer" &&
+      path==="/faculty-members" &&
      <TeacherTrainer/>
     }
     {
-      path==="/commitee-members" &&
+      path==="/executive-committee" &&
       <Commitee/>
     }
 
