@@ -84,6 +84,8 @@ const Header = () => {
                       "activeNavLink" : ""}`} title="Admin" id="navbarScrollingDropdown">
                     <NavDropdown.Item as={Link} to="/admin">Add Member</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/membersList">Members List</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/add-faculty">Add Faculty</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/facultiesList">Faculties List</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/add-event">Add Event</NavDropdown.Item>
                     <NavDropdown.Item >
                       <p onClick={handleLogOut}>Logout</p>
