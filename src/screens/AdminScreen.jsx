@@ -9,10 +9,13 @@ const AdminScreen = () => {
 
   useEffect(()=>
   {
-      if(!userInfo)
-      {
-           navigate('/login')
-      }
+    if(!userInfo)
+    {
+         navigate('/login')
+    }
+    else if(userInfo.isAdmin===false) {
+        navigate('/')
+    }
   },[navigate,userInfo])
 
   return (

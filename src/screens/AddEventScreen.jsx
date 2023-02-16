@@ -20,9 +20,12 @@ const AddEventScreen = () => {
     useEffect(()=>
     {
         if(!userInfo)
-        {
-             navigate('/login')
-        }
+    {
+         navigate('/login')
+    }
+    else if(userInfo.isAdmin===false) {
+        navigate('/')
+    }
     },[navigate,userInfo])
 
 

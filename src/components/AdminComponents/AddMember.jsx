@@ -18,9 +18,12 @@ const AddMember = () => {
     useEffect(()=>
     {
         if(!userInfo)
-        {
-             navigate('/login')
-        }
+    {
+         navigate('/login')
+    }
+    else if(userInfo.isAdmin===false) {
+        navigate('/')
+    }
     },[navigate,userInfo])
 
     const [errorMessage, setErrorMessage] = useState('')

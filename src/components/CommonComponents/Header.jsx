@@ -87,6 +87,7 @@ const Header = () => {
                     <NavDropdown.Item as={Link} to="/add-faculty">Add Faculty</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/facultiesList">Faculties List</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/add-event">Add Event</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/auto-passwords">Auto Passwords</NavDropdown.Item>
                     <NavDropdown.Item >
                       <p onClick={handleLogOut}>Logout</p>
 

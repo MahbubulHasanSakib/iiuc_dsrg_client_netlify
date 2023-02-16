@@ -19,6 +19,9 @@ const AddFacultyScreen = () => {
         {
              navigate('/login')
         }
+        else if(userInfo.isAdmin===false) {
+            navigate('/login')
+        }
     },[navigate,userInfo])
 
     const [errorMessage, setErrorMessage] = useState('')

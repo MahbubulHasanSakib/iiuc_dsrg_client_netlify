@@ -21,7 +21,7 @@ const LoginScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            navigate('/admin')
+            navigate('/')
         }
     }, [navigate, userInfo])
     const handleSubmit = async (e) => {

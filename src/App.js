@@ -29,6 +29,7 @@ import BlogDetailsScreen from "./screens/BlogDetailsScreen";
 import AddFacultyScreen from "./screens/AddFacultyScreen";
 import EditFacultyScreen from "./screens/EditFacultyScreen";
 import FacultyListScreen from "./screens/FacultyListScreen";
+import GetAutoPassScreen from "./screens/GetAutoPassScreen";
 function App() {
   return (
     <div className="App">
@@ -60,6 +61,8 @@ function App() {
       <Route path="/my-profile"  element={<EditUserProfileScreen />} />
       <Route path="/change-password"  element={<ChangePasswordScreen />} />
       <Route path="/add-faculty"  element={<AddFacultyScreen />} />
+      <Route path="/auto-passwords"  element={<GetAutoPassScreen />} />
+    
     </Routes>
   </BrowserRouter>
     </div>
