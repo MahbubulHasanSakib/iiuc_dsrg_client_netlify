@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/logo.jpg'
+import Logo from '../assets/logo.png'
 import { useParams,useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useAppContext } from '../Context/userContext';

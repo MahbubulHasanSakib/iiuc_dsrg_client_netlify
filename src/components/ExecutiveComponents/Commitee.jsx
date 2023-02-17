@@ -76,7 +76,9 @@ const Commitee = () => {
    committee.filter((m)=>m.designation.toLowerCase()!=='chief' && m.section==='chief_and_vice-chief')
    
    const Coordinators_and_leads=committee && committee.length>0 && committee.filter((m)=>m.section==='coordinator_and_team-leader')
-   
+
+   if(Coordinators_and_leads && Coordinators_and_leads.length>0)
+   Coordinators_and_leads.sort((a, b) => a.section_order - b.section_order);
    const Executives=committee && committee.length>0 && committee.filter((m)=>m.section==='executive_member')
    
 

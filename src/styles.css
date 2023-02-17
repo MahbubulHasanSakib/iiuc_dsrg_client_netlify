@@ -471,7 +471,14 @@ color: white!important;
 .add-experiance svg{
   padding: 0!important;
 }
-
+.login-page2 {
+  background: black;
+  color: wheat;
+}
+.btn-login:hover {
+  background-color: #551818!important;
+  color: #ffffff!important;
+}
 
 
 

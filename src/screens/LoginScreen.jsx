@@ -6,7 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useAppContext } from '../components/Context/userContext'
-import loginUp from '../components/assets/LoginUpLogo.png'
+import loginUp from '../components/assets/logo.png'
 import loginSide from '../components/assets/idsrg-admin-page-logo.png'
 const LoginScreen = () => {
 
@@ -107,8 +107,7 @@ const LoginScreen = () => {
                     <div className="text-center">
                         <img src={loginUp}
                             style={{ width: '185px' }} alt="logo" />
-                        <h4 className="mt-1 mb-5 pb-1">IIUC Data Science Research Group</h4>
-                    </div>
+                         </div>
 
                     <h5 className='text-center'>Please Login Your Account</h5>
                     {
