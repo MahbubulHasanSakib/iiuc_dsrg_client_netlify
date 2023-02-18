@@ -47,7 +47,7 @@ const CurrentEvents = () => {
                 <div> <h3 className='text-center'>Our Current Events</h3></div>
                 <Separator />
             </div>
-            <Row xs={1} md={2} lg={2} xl={3} className="g-5">
+            <Row xs={1} md={2} lg={2} xl={3} className="g-5 d-flex justify-content-center">
                 {
                     loading ?
                         <Loader /> :
@@ -72,9 +72,11 @@ const CurrentEvents = () => {
                         ))
                 }
             </Row>
+            {events && events.length > 0 &&
             <div className='mt-5' style={{ textAlign: 'center', color: "white" }}>
                 <Link to="/activities"><button className='btn btn-outline-dark px-5 py-2'>See More Events</button></Link>
             </div>
+           }
         </Container>
     );
 };
