@@ -10,7 +10,7 @@ import { useAppContext } from '../components/Context/userContext'
 import '../components/css/styles.css'
 import WithLayout from '../Layout/WithLayout'
 import Loader from '../components/CommonComponents/Loader'
-
+import { checkJWT } from '../checkJWT'
 const EditUserProfileScreen = () => {
   const userData = useAppContext()
   const member = localStorage.getItem('userInfo')
@@ -73,6 +73,18 @@ const EditUserProfileScreen = () => {
       setLoading(true)
     }
   }, [])
+
+  useEffect(()=>
+    {
+        if(!userInfo)
+        {
+             navigate('/login')
+        }
+        else {
+            checkJWT(navigate)
+        }
+    },[navigate,userInfo])
+
   useEffect(() => {
    
     try {

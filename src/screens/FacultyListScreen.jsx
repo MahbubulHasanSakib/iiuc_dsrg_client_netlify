@@ -7,6 +7,7 @@ import ProfileImg from '../components/assets/profileImg.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from '../components/CommonComponents/Loader'
 import { faEdit,faDeleteLeft,faCheck,faTimes } from '@fortawesome/free-solid-svg-icons'
+import { checkJWT } from '../checkJWT'
 const FacultyListScreen = () => {
 
  const [members,setMembers]=useState([])
@@ -33,6 +34,10 @@ const FacultyListScreen = () => {
     }
     else if(userInfo.isAdmin===false) {
         navigate('/')
+    }
+    else if(userInfo.isAdmin==true)
+    {
+      checkJWT(navigate);
     }
   },[navigate,userInfo])
   

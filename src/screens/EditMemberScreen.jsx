@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import ProfileImg from '../components/assets/profileImg.jpg'
 import Header from '../components/AdminComponents/Header'
+import { checkJWT } from '../checkJWT'
 const EditMemberScreen = () => {
     const navigate=useNavigate()
     const params=useParams();
@@ -28,6 +29,10 @@ const EditMemberScreen = () => {
     }
     else if(userInfo.isAdmin===false) {
         navigate('/')
+    }
+    else if(userInfo.isAdmin==true)
+    {
+      checkJWT(navigate);
     }
     },[navigate,userInfo])
 

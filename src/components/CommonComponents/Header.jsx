@@ -1,3 +1,4 @@
+import React,{useEffect} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,6 +9,7 @@ import { useParams } from 'react-router-dom';
 import { useLocation,useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useAppContext } from '../Context/userContext';
+import axios from 'axios'
 const Header = () => {
   const params = useParams()
   const navigate=useNavigate()
@@ -15,6 +17,40 @@ const Header = () => {
   // let userInfo=localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):null
   const currentLocation = useLocation().pathname;
   const [userInfo, setUserInfo] = useState(localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null)
+  const [jwtValid,setJwtValid]=useState(true)
+ const checkJWT = async () => {
+    // const navigate=useNavigate()
+     try {
+       const user=localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):null
+      if(user)
+      {
+       
+       const response=await axios.get('https://gray-awful-newt.cyclic.app/api/checkjwt', {
+         headers: {
+           Authorization: `Bearer ${user.token}`
+         }
+       });
+       if(!response.data.success)
+       {
+         localStorage.removeItem('userInfo')
+         setJwtValid(false)
+       }
+      }
+     } catch (error) {
+       console.log("error")
+       console.log(error);
+       setJwtValid(false)
+       localStorage.removeItem('userInfo')
+       // Redirect to login page if JWT is not valid
+       //window.location.href = '/login';
+     }
+   };
+
+  useEffect(()=>
+    {
+      checkJWT()
+    },[userInfo])
+    
   const handleLogOut = () => {
     localStorage.removeItem('userInfo');
     setUserInfo(null)
@@ -76,7 +112,7 @@ const Header = () => {
               className={`${currentLocation === "/about" ? "activeNavLink" : ""}`}
               to="/about">About</Nav.Link>
             {
-              userInfo ?
+              (userInfo && jwtValid) ?
                 userInfo.isAdmin?
                 <>
                   <NavDropdown

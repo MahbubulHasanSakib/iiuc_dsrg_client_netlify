@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Form } from 'react-bootstrap'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { checkJWT } from '../checkJWT'
 const AddFacultyScreen = () => {
     const navigate=useNavigate()
     const [memberInfo, setMemberInfo] = useState({
@@ -22,6 +23,10 @@ const AddFacultyScreen = () => {
         else if(userInfo.isAdmin===false) {
             navigate('/login')
         }
+        else if(userInfo.isAdmin==true)
+    {
+      checkJWT(navigate);
+    }
     },[navigate,userInfo])
 
     const [errorMessage, setErrorMessage] = useState('')

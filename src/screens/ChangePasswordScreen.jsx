@@ -8,6 +8,7 @@ import axios from 'axios'
 import { useAppContext } from '../components/Context/userContext'
 import WithLayout from '../Layout/WithLayout'
 import loginUp from '../components/assets/LoginUpLogo.png'
+import { checkJWT } from '../checkJWT'
 const ChangePasswordScreen = () => {
 
     const navigate = useNavigate()
@@ -22,6 +23,9 @@ const ChangePasswordScreen = () => {
     useEffect(() => {
         if (!userInfo) {
             navigate('/login')
+        }
+        else {
+            checkJWT(navigate)
         }
     }, [navigate, userInfo])
     const handleSubmit = async (e) => {

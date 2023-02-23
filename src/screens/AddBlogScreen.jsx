@@ -4,6 +4,8 @@ import { Form } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import WithLayout from '../Layout/WithLayout'
+import { checkJWT } from '../checkJWT'
+
 const AddBlogScreen = () => {
     const navigate=useNavigate()
     const params=useParams();
@@ -21,6 +23,9 @@ const AddBlogScreen = () => {
         if(!userInfo)
         {
              navigate('/login')
+        }
+        else {
+            checkJWT(navigate)
         }
     },[navigate,userInfo])
 
