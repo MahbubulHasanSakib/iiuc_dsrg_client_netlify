@@ -482,7 +482,7 @@ return dateB - dateA; */
 
           {userData.userInfo.user && (
             <div className="title">
-             { memberDetails.username===(JSON.parse(localStorage.getItem('userInfo'))).username
+             { memberDetails.username===(JSON.parse(localStorage.getItem('userInfo')))?.username
               &&
               <div className="add-experiance">
                 <p>Add experience</p>
