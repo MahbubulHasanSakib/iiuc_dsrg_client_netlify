@@ -480,19 +480,7 @@ return dateB - dateA; */
           </div>
           
 
-          {userData.userInfo.user && (
-            <div className="title">
-             { memberDetails.username===(JSON.parse(localStorage.getItem('userInfo')))?.username
-              &&
-              <div className="add-experiance">
-                <p>Add experience</p>
-                <p>
-                  <FontAwesomeIcon onClick={handleShow} icon={faPlus} />
-                </p>
-              </div>
-            }           
-            </div>
-          )}
+        
           {memberDetails.jobs && memberDetails.jobs.length > 0 &&(
           <div className="infos" style={{ paddingBottom: '10px' }}>
            
