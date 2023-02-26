@@ -703,11 +703,11 @@ const EditUserProfileScreen = () => {
                   ) : null}
                   {memberDetails.reseachers_and_publications &&
                     memberDetails.reseachers_and_publications.length > 0 &&
-                    memberDetails.reseachers_and_publications.map((pub) => {
+                    memberDetails.reseachers_and_publications.map((pub,idx) => {
                       return (
                         <>
-                          <h5>{pub.paper_name}</h5>
-                          <p style={{ marginBottom: '20px' }}>{pub.authors}</p>
+                           <h5>{`${idx+1}.${pub.paper_name}`}</h5>
+                          <p style={{ marginBottom: '20px' }}>Authors:{pub.authors}</p>
                         </>
                       )
                     })}
