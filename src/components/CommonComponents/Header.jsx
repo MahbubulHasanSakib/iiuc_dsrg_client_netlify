@@ -78,7 +78,7 @@ const Header = () => {
                 && currentLocation !== "/" && currentLocation !== "/activities" && currentLocation !== "/blogs" 
                 && currentLocation !== "/add-blog" && !params.eid && !params.bid) ?
                 "activeNavLink" : ""}`} title="Team" id="navbarScrollingDropdown">
-              <NavDropdown.Item className={`${currentLocation === "/founder-and-head" ? "activeNavLink" : ""}`} as={Link} to="/founder-and-head">Founder and Head</NavDropdown.Item>
+              <NavDropdown.Item className={`${currentLocation === "/me/founder_head" ? "activeNavLink" : ""}`} as={Link} to="/me/founder_head">Founder and Head</NavDropdown.Item>
               <NavDropdown.Item className={`${currentLocation === "/advisory-panel" ? "activeNavLink" : ""}`} as={Link} to="/advisory-panel">Advisory Panel</NavDropdown.Item>
               <NavDropdown.Item className={`${currentLocation === "/faculty-members" ? "activeNavLink" : ""}`} as={Link} to="/faculty-members">Faculty Members</NavDropdown.Item>
               <NavDropdown.Item className={`${currentLocation === "/executive-committee" ? "activeNavLink" : ""}`} as={Link} to="/executive-committee">Executive Committee</NavDropdown.Item>

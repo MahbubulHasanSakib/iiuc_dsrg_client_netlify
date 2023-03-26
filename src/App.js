@@ -38,7 +38,7 @@ function App() {
     <Routes>
       <Route path="/" exact element={<HomeScreen />} />
       <Route path="/about"  element={<AboutScreen />} />
-      <Route path="/founder-and-head" element={<ExecutiveScreen />} />
+      <Route path="/me/founder_head" element={<ExecutiveScreen />} />
       <Route path="/advisory-panel" element={<ExecutiveScreen />} />
       <Route path="/faculty-members" element={<ExecutiveScreen />} />
       <Route path="/executive-committee" element={<ExecutiveScreen />} />

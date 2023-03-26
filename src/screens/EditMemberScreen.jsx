@@ -15,7 +15,8 @@ const EditMemberScreen = () => {
         phone: "",
         image:"",
         field_of_interest: "",
-        description: ""
+        description: "",
+        membershipId:""
     })
 
 
@@ -56,7 +57,8 @@ const EditMemberScreen = () => {
                 phone: memberDetails.phone,
                 image:memberDetails.profileImg,
                 field_of_interest: memberDetails.field_of_interest,
-                description: memberDetails.description
+                description: memberDetails.description,
+                membershipId:memberDetails.membershipId
               })
           } catch (error) {
               console.log(error)
@@ -91,6 +93,7 @@ const EditMemberScreen = () => {
      formData.append("image",memberInfo.image)
      formData.append("field_of_interest",memberInfo.field_of_interest)
      formData.append("description",memberInfo.description)
+     formData.append("membershipId",memberInfo.membershipId)
      
             const { data } = await axios.put(`https://gray-awful-newt.cyclic.app/api/editMember/${params.id}`, formData, config)
            
@@ -152,6 +155,9 @@ const EditMemberScreen = () => {
                                 </div>
                                 <div class="form-group">
                                     <input type="email" onChange={handleChange} name="email" class="form-control" placeholder="Email *" value={memberInfo.email} />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" onChange={handleChange} name="membershipId" class="form-control" placeholder="Membership ID *" value={memberInfo.membershipId} />
                                 </div>
                                 <div class="form-group">
                                     <input type="text" onChange={handleChange} name="phone" class="form-control" placeholder="Phone *" value={memberInfo.phone} />

@@ -11,7 +11,7 @@ const ExecutiveScreen = () => {
   <>
 
     {
-      path==="/founder-and-head" &&
+      path==="/me/founder_head" &&
       <Founder/>
     }
     {

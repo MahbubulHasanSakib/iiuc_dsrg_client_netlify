@@ -11,6 +11,7 @@ import { checkJWT } from '../checkJWT'
 const GetAutoPassScreen = () => {
 
  const [members,setMembers]=useState([])
+ const [memberIds,setMemberIds]=useState([])
   useEffect(()=>{
    try {
     const user=localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):null
@@ -22,7 +23,8 @@ const GetAutoPassScreen = () => {
     }
     const getMembers=async()=>{
       const response=await axios.get('https://gray-awful-newt.cyclic.app/getAutoPasswords',config);
-      setMembers(response.data)
+       setMembers(response.data.getAllAutoPass)
+      setMemberIds(response.data.getAllMembers)
      }
      getMembers()
    } catch (error) {
@@ -59,6 +61,7 @@ const GetAutoPassScreen = () => {
       
       <th>UserName</th>
       <th>Auto Password</th>
+      <th>MemberShip Id</th>
     </tr>
   </thead>
   <tbody>
@@ -68,6 +71,7 @@ const GetAutoPassScreen = () => {
         return <tr key={index}>
         <td>{member.uname}</td>
         <td>{member.pass}</td>
+        <td>{memberIds[index].membershipId}</td>
         </tr>
       })
       
