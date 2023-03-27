@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     const userData = useAppContext()
 
-    const [username, setUsername] = useState('')
+    const [membershipId, setMembershipId] = useState('')
     const [password, setPassword] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
     const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
@@ -33,7 +33,7 @@ const LoginScreen = () => {
                     'Content-Type': 'application/json'
                 }
             }
-            const { data } = await axios.post('https://gray-awful-newt.cyclic.app/login', { username, password }, config)
+            const { data } = await axios.post('https://gray-awful-newt.cyclic.app/login', { membershipId, password }, config)
             localStorage.setItem('userInfo', JSON.stringify(data))
             userData.userInfo.setUser(data)
             navigate('/')
@@ -44,63 +44,7 @@ const LoginScreen = () => {
         }
     }
     return (
-        /*Admin Login Page 1 (Nayem)*/
-        // <Container className="mt-4 gradient-form">
-        //     <Row>
-        //         <Col md={6} className="mb-sm-5 border border-2">
-
-        //             <div className="d-flex flex-column p-5">
-        //                 <div className="text-center">
-        //                     <img src={loginUp}
-        //                         style={{ width: '185px' }} alt="logo" />
-        //                     <h4 className="mt-1 mb-5 pb-1">We are the IDSRG Team</h4>
-        //                 </div>
-
-        //                 <h5 className='text-center'>ADMIN LOGIN</h5>
-        //                 {
-        //                     errorMessage !== "" &&
-        //                     <div class="alert alert-danger" role="alert">
-        //                         <p>{errorMessage}</p>
-        //                     </div>
-        //                 }
-        //                 <Form onSubmit={(e) => handleSubmit(e)} >
-        //                     <Form.Group className="mb-4" controlId="adminEmail">
-        //                         <Form.Label>Email</Form.Label>
-        //                         <Form.Control className="p-2" type='email' onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter email" />
-        //                     </Form.Group>
-
-        //                     <Form.Group className="mb-4" controlId="adminPassword">
-        //                         <Form.Label>Password</Form.Label>
-        //                         <Form.Control className="p-2" type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Enter Password" />
-        //                     </Form.Group>
-
-        //                     <div className="text-center pt-1 mb-5 pb-1">
-        //                         <button type="submit" className="btn-login border-0 fw-bold mb-4 w-100">LOG IN</button>
-        //                         <a className="text-muted" style={{fontSize: "1.2rem" }} href="#!">Forgot password?</a>
-        //                     </div>
-
-        //                     <div className="d-md-flex flex-row align-items-center justify-content-center pb-md-4 mb-4">
-        //                         <h5 className="mb-0">Are't you an admin?</h5>
-        //                         <button className='btn btn-dark text-white rounded-pill mx-md-2 px-md-4 py-md-1'>
-        //                             <Link to='/' style={{textDecoration:"none", color:"white" }}><i class="bi bi-arrow-left-circle-fill">
-        //                             </i>&nbsp;&nbsp;Go Back</Link>
-        //                         </button>
-        //                     </div>
-        //                 </Form>
-        //             </div>
-        //         </Col>
-        //         <Col md={6} className="mb-lg-5 p-0">
-        //             <div className="d-flex flex-column gradient-custom-background justify-content-center h-100">
-        //                 <div className="text-center">
-        //                     <img src={loginSide} alt="logo" className='p-5' />
-        //                 </div>
-        //             </div>
-        //         </Col>
-        //     </Row>
-        // </Container>
-
-
-        /*Admin Login Page 2 (Nayem)*/
+        
         <Container className="login-page2 mt-4 shadow-lg p-0">
             <div className="mb-sm-5 border border-2" >
                 <div className="d-flex flex-column p-5">
@@ -118,8 +62,8 @@ const LoginScreen = () => {
                     }
                     <Form onSubmit={(e) => handleSubmit(e)} >
                         <Form.Group className="mb-4" controlId="adminEmail">
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control className="p-2" type='text' onChange={(e) => setUsername(e.target.value)} value={username} placeholder="Enter Username" />
+                            <Form.Label>Membership Id</Form.Label>
+                            <Form.Control className="p-2" type='text' onChange={(e) => setMembershipId(e.target.value)} value={membershipId} placeholder="Enter membership id" />
                         </Form.Group>
 
                         <Form.Group className="mb-4" controlId="adminPassword">
@@ -145,32 +89,6 @@ const LoginScreen = () => {
         </Container>
 
 
-        // <div>
-        //     <Container>
-        //         <h1 className='text-center'>Login Form</h1>
-        //         {
-        //             errorMessage !== "" &&
-        //             <div class="alert alert-danger" role="alert">
-        //                 <p>{errorMessage}</p>
-        //             </div>
-        //         }
-        //         <Form onSubmit={(e) => handleSubmit(e)} >
-        //             <Form.Group className="mb-3" controlId="formBasicEmail">
-        //                 <Form.Label>Email address</Form.Label>
-        //                 <Form.Control name="email" type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter email" />
-        //             </Form.Group>
-
-        //             <Form.Group className="mb-3" controlId="formBasicPassword">
-        //                 <Form.Label>Password</Form.Label>
-        //                 <Form.Control name="password" type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Password" />
-        //             </Form.Group>
-        //             <Button variant="primary" type="submit">
-        //                 Submit
-        //             </Button>
-        //             <p>Don't have an account?<Link to='/register'><span>sign up</span></Link></p>
-        //         </Form>
-        //     </Container>
-        // </div>
     )
 }
 
