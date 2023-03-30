@@ -73,7 +73,7 @@ const LoginScreen = () => {
 
                         <div className="text-center pt-1 mb-5 pb-1">
                             <button type="submit" className="btn-login border-0 fw-bold mb-4 w-100"> <i class="bi bi-person-fill-down"></i>&nbsp;LOG IN</button>
-                            <a className="text-muted" style={{ fontSize: "1.2rem" }} href="#!">Forgot password?</a>
+                            <Link to="/forget-password" className="text-muted" style={{ fontSize: "1.2rem" }}>Forgot password?</Link>
                         </div>
 
                         <div className="d-md-flex flex-row align-items-center justify-content-center pb-md-4 mb-4">

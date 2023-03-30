@@ -41,7 +41,7 @@ const AddEventScreen = () => {
     const [successMessage, setSuccessMessage] = useState('')
     const handleSubmit = async (e) => {
         e.preventDefault()
-       console.log(eventInfo)
+       //console.log(eventInfo)
         const user=localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):null
 
        if(eventInfo.title!==""  && 
@@ -56,9 +56,9 @@ const AddEventScreen = () => {
             }
 
             const formData=new FormData()
-            console.log(eventInfo.event_image.length)
+           // console.log(eventInfo.event_image.length)
             for (let i = 0; i < eventInfo.event_image.length; i++) {
-                console.log(eventInfo.event_image[i])
+               // console.log(eventInfo.event_image[i])
                 formData.append("event_image", eventInfo.event_image[i]);
               }
      
@@ -91,7 +91,7 @@ const AddEventScreen = () => {
 
     const handleFileChange=(e)=>{
         const key = e.target.name;
-        console.log(e.target.files)
+       // console.log(e.target.files)
         setEventInfo({ ...eventInfo, [key]: e.target.files })
     }
 

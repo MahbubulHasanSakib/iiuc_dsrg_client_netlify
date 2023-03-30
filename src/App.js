@@ -30,6 +30,8 @@ import AddFacultyScreen from "./screens/AddFacultyScreen";
 import EditFacultyScreen from "./screens/EditFacultyScreen";
 import FacultyListScreen from "./screens/FacultyListScreen";
 import GetAutoPassScreen from "./screens/GetAutoPassScreen";
+import ChangeForgetPass from "./screens/ChangeForgetPass";
+import AdminPassChangeScreen from "./screens/AdminPassChangeScreen";
 function App() {
   return (
     <div className="App">
@@ -62,7 +64,8 @@ function App() {
       <Route path="/change-password"  element={<ChangePasswordScreen />} />
       <Route path="/add-faculty"  element={<AddFacultyScreen />} />
       <Route path="/auto-passwords"  element={<GetAutoPassScreen />} />
-    
+      <Route path="/forget-password"  element={<ChangeForgetPass />} />
+      <Route path="/admin/change-password"  element={<AdminPassChangeScreen />} />
     </Routes>
   </BrowserRouter>
     </div>
